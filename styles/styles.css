@@ -1,0 +1,817 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300..700&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  background-image: url(fundo.png);
+  color: #f5f5f5; /* Texto claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Nunito', sans-serif; /* Fonte global */
+}
+
+/* Cabeçalhos */
+h1, h2 {
+  font-family: "Sour Gummy", sans-serif;
+}
+
+p, li, footer {
+  font-family: "Nunito", sans-serif; /* Fonte simples e legível */
+}
+
+/* Container principal */
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Ícones das redes sociais */
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+/* Menu */
+.menu {
+  margin-top: 30px;
+}
+
+.menu h2 {
+  font-size: 2.8em;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu li {
+  margin-bottom: 0;
+}
+
+.menu li a {
+  font-size: 1.2em;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.menu li a:hover {
+  color: #a7ae1f;
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Seções */
+.welcome, .projects {
+  margin-top: 20px; /* Ajustei o espaçamento */
+}
+
+.welcome h1 {
+  font-size: 3em;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  border-left: 3px solid #000000;
+  padding-left: 15px;
+  color: #000000;
+}
+
+/* Header inicial */
+.inicial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 40px;
+  padding: 10px 0;
+  border-top: 1px solid #333;
+}
+
+
+
+
+/*----------------------------------------*/
+/*PaginaExperiencia*/
+/* Estilos do botão de menu */
+.menu-btn {
+  font-size: 2em;
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 20px; 
+  left: 20px; 
+  z-index: 10; 
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Cada linha do botão de menu */
+.menu-btn div {
+  width: 30px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 5px;
+  transition: transform 0.3s ease; 
+}
+
+.menu-btn.open {
+  transform: translate(180px) 
+}
+
+/* Estilos do Sidebar */
+
+/* Linha menor */
+.short-line {
+  width: 60%; 
+  margin: 10px auto; 
+  border: none;
+  border-top: 2px solid #000;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  align-items: center;
+  overflow-x: hidden;
+  transition: width 0.5s ease; 
+  padding-top: 60px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+  border-right: 1px solid #e0e0e0;
+}
+
+/* Estilos dos links no menu */
+.sidebar a {
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #000000; 
+  display: block;
+  transition: transform 0.2s ease; 
+}
+
+.sidebar a:hover {
+  transform: scale(1.1); 
+}
+
+.sidebar a i {
+  margin-right: 10px; 
+  font-size: 1.1em; 
+}
+
+
+/* Fechar o sidebar */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Estilo para os links sociais */
+.social-links {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.social-links a {
+  font-size: 1.2em;
+  color: #333333;
+  transition: transform 0.2s; 
+}
+
+.social-links a:hover {
+  transform: scale(1.2); 
+}
+
+
+/*------------------------*/
+.experiencia-page {
+  background-image: url(fundo.png);
+  color: #f5f5f5; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Nunito', sans-serif; 
+  
+}
+
+.experiencia-page{
+    font-family: "Sour Gummy", sans-serif;
+}
+  
+.experiencia-page p, li, footer {
+    font-family: "Nunito", sans-serif; }
+
+.experien-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: #f5f5f5;
+  position: fixed;
+}
+
+
+/*----------------------------------------------*/
+/* Estilos para o carrossel de conteúdo */
+/* Contêiner do carrossel */
+.carousel-container {
+  max-width: 1000px;
+  width: calc(100% - 80px);
+  padding: 20px;
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 100px; 
+  position: relative; 
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho do carrossel */
+.carousel-header {
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 20px; 
+  padding: 0 20px; 
+}
+
+/* Título do carrossel */
+.carousel-header h2 {
+  font-size: 2em;
+  color: #000;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px; 
+  padding-bottom: 5px; 
+  border-bottom: 2px solid #bb3e09;
+  margin-top: 50px;
+}
+
+.carousel-header nav {
+  font-size: 1.1em;
+  display: flex; 
+  justify-content: flex-start; 
+  align-items: center; 
+  margin-left: 20px; 
+}
+
+
+/* Estilo das seções do carrossel */
+.carousel-section {
+  margin-top: 20px;
+  display: block;
+}
+
+/* Botões de navegação do carrossel */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.carousel-nav button {
+  font-family: 'Nunito', sans-serif;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #f5f5f5;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-nav button:hover {
+  background-color: #bb3e09;
+  transform: scale(1.05);
+  
+}
+
+/* Estilo para os títulos das seções no carrossel */
+.carousel-section h3 {
+  font-size: 2em;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+/* Estilo para os parágrafos das seções no carrossel */
+.carousel-section p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 20px;
+  border-left: 3px solid #000;
+  padding-left: 15px;
+}
+
+/* Estilos para a lista de formação complementar */
+.carousel-section ul {
+  list-style: none;
+  padding: 0;
+  color: #000;
+  font-family: 'Nunito';
+  margin-bottom: 20px;
+  border-left: 3px solid #390e0e;
+  padding-left: 15px;
+}
+
+.carousel-section ul li {
+  margin-bottom: 8px;
+ 
+}
+
+/* Rodapé fixo */
+.experien-footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 40px;
+  padding: 10px 0;
+  border-top: 1px solid #333;
+}
+
+/*PROJETO*/
+
+
+/* Estilo para os projetos com a caixinha */
+.projeto {
+  border: 2px solid #f5a623; 
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+}
+
+.projeto:hover {
+  transform: translateY(-5px); 
+  background-color: #f1f1f1; 
+}
+
+.projetos h1 {
+  font-size: 2em;
+  color: #000;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px; 
+  padding-bottom: 5px; 
+  border-bottom: 2px solid #f5a623; 
+  margin-top: 50px;
+}
+
+.projetos p {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+/* Estilo para o título do projeto */
+.projeto h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #000;
+  cursor: pointer; 
+  transition: color 0.3s ease; 
+}
+
+/* Estilo para o link (GitHub) */
+.projeto a {
+  text-decoration: none;
+  color: #000;
+}
+
+.projeto a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para o botão de menu de projeto (ícone hamburguer) */
+.menu-btn-projeto {
+  font-size: 2em;
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 20px; 
+  left: 20px; 
+  z-index: 10; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+/* Estilo das três linhas */
+.menu-btn-projeto div {
+  width: 30px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.menu-btn-projeto.open {
+  transform: translate(180px) 
+}
+
+
+/* Estilo da sidebar (menu lateral) para projetos */
+.sidebar-projeto {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  align-items: center;
+  overflow-x: hidden;
+  transition: width 0.5s ease; 
+  padding-top: 60px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+  border-right: 1px solid #e0e0e0;
+}
+
+/* Outros estilos das opções do menu como já mencionado */
+.sidebar-projeto a {
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #000000;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-projeto a:hover {
+  transform: scale(1.1); 
+}
+
+.sidebar-projeto a i {
+  margin-right: 10px; 
+  font-size: 1.1em;
+}
+
+.short-line-projeto {
+  width: 60%; 
+  margin: 10px auto; 
+  border: none; 
+  border-top: 2px solid #000; 
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px; 
+  }
+
+  .welcome h1 {
+    font-size: 2em; 
+  }
+
+  .welcome p {
+    font-size: 1em; 
+    line-height: 1.4; 
+  }
+
+  .menu ul {
+    flex-direction: column; 
+    gap: 10px; 
+  }
+
+  .menu li a {
+    font-size: 1em; 
+    padding: 8px; 
+  }
+
+  .projeto {
+    padding: 10px; 
+  }
+
+  .projeto h2 {
+    font-size: 1.2em; 
+  }
+
+  .projeto p {
+    font-size: 0.9em; 
+  }
+
+  footer {
+    font-size: 0.8em; 
+  }
+
+  .menu-btn-projeto {
+    top: 15px; 
+    left: 15px;
+    width: 25px; 
+    height: 20px;
+  }
+
+  .menu-btn-projeto div {
+    width: 25px; 
+    height: 3px;
+  }
+}
+
+/*CONTATO*/
+/* Formulário de Contato */
+.container-contato {
+  max-width: 700px;
+  margin-top: 600px;
+  width: 100%;
+  padding: 20px;
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.formulario-contato {
+  max-width: 600px;
+  margin: 50px auto; 
+  margin-top: 85px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  position: relative;
+}
+
+.formulario-contato h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #000;
+  border-bottom: 2px solid #f5a623;
+  padding-bottom: 10px;
+}
+
+.formulario-contato p {
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+  padding-bottom: 10px;
+}
+
+.formulario-contato label {
+  color: #000;
+  font-family: "Nunito", sans-serif;
+}
+
+#nome,
+#email,
+#mensagem {
+  font-family: "Nunito", sans-serif;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.formulario-contato button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #f5a623;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Nunito", sans-serif;
+}
+
+.formulario-contato button:hover {
+  background-color: #e5941f;
+}
+
+/* Minhas Informações */
+.info-contato {
+  text-align: center;
+  margin-top: 50px; 
+}
+
+.info-contato h2 {
+  margin: 20px 0;
+  font-size: 25px;
+  color: #000;
+}
+
+.info-contato ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-contato li {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #000;
+}
+
+.info-contato i {
+  margin-right: 5px;
+  color: #000;
+}
+
+.mapa h2 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* Mapa */
+.map-container {
+  width: 100%; 
+  max-width: 600px; 
+  margin: 20px auto;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-btn-contato {
+  font-size: 2em;
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 20px; 
+  left: 20px; 
+  z-index: 10; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+/* Estilo das três linhas */
+.menu-btn-contato div {
+  width: 30px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.menu-btn-contato.open {
+  transform: translate(180px) 
+}
+
+
+/* Estilo da sidebar (menu lateral) para projetos */
+.sidebar-contato {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  align-items: center;
+  overflow-x: hidden;
+  transition: width 0.5s ease; 
+  padding-top: 60px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar-contato a {
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #000000;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-contato a:hover {
+  transform: scale(1.1); 
+}
+
+.sidebar-contato a i {
+  margin-right: 10px; 
+  font-size: 1.1em;
+}
+
+.short-line-contato {
+  width: 60%; 
+  margin: 10px auto; 
+  border: none; 
+  border-top: 2px solid #000; 
+}
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .formulario-contato {
+    padding: 10px; 
+  }
+
+  .formulario-contato h2 {
+    font-size: 1.5em; 
+  }
+
+  .formulario-contato input,
+  .formulario-contato textarea {
+    font-size: 0.8em; 
+  }
+
+  .formulario-contato button {
+    font-size: 0.9em; 
+  }
+
+  .info-contato {
+    padding: 0 10px;
+  }
+
+  .mapa iframe {
+    height: 250px; 
+  }
+}
+
+
+
+
+
+
+
