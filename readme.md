@@ -13,7 +13,7 @@ Este portfólio será atualizado à medida que eu adquirir mais conhecimentos e 
 ### 2. **[Portfólio]**
 - **Descrição**: Este é o meu portfólio pessoal, onde compartilho informações sobre meus projetos, habilidades e minha trajetória. Foi desenvolvido usando HTML, CSS e JavaScript.
 - **Tecnologias**: HTML, CSS, JavaScript
-- **Link**: <a href="https://giovanaasilvaa.github.io/Portfolio/"> <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
+- **Link**: <a href="https://github.com/Giovanaasilvaa?tab=repositories"> <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
 
 ## 🛠️ Tecnologias & Ferramentas
 
