@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de contato de Giovana Marques Silva. Envie uma mensagem ou encontre minhas informações de contato.">
+  <meta name="author" content="Giovana Marques Silva">
+  <meta name="keywords" content="contato, portfólio, desenvolvedora, Giovana Marques Silva, mensagem">
+  <title>Contato</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <div class="container-contato">
+    <header>
+
+      <div class="links-header-contato">
+        <a href="index.html" aria-label="Página Inicial">Home</a>
+        <a href="projetos.html" class="active" aria-label="Projetos">Projetos</a>
+        <a href="experiencia.html" aria-label="Experiências">Experiências</a>
+      </div>
+
+      <div class="social-icons-contato">
+        <a href="https://www.linkedin.com/in/giovana-marques-silva-aa8595297" target="_blank" title="Linkedin" aria-label="Linkedin">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Giovanaasilvaa" target="_blank" title="GitHub" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:giovanamarquessilva24@gmail.com" target="_blank" title="E-mail" aria-label="E-mail">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <h1>Contato</h1>
+    </header>
+
+    <main>
+      <section class="formulario-contato">
+        <h2>Envie uma Mensagem</h2>
+        <p>Fique à vontade para me enviar uma mensagem. Estou sempre aberta a novas oportunidades e colaborações!</p>
+        <form action="https://formspree.io/f/xnnqzazo" method="POST" aria-labelledby="formulario-contato">
+          <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+          </div>
+
+          <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+          </div>
+
+          <div>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </section>
+
+      <section class="info-contato">
+        <h2>Minhas Informações</h2>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:marquessilvagiovana24@gmail.com">giovanamarquessilva24@gmail.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> Sumaré, São Paulo, Brasil</li>
+        </ul>
+      </section>
+
+      <section class="mapa">
+        <h2>Localização</h2>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.2981757516036!2d-47.267!3d-22.822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59cb198bf21b%3A0x4d56eb2c245b9b71!2sSumar%C3%A9%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890123" 
+          width="100%" 
+          height="300" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Giovana Marques Silva. <br> Todos os direitos reservados.</p>
+    </footer>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
